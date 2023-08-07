@@ -1,0 +1,9 @@
+export { default as Hero } from "./Hero/Hero";
+export { default as SocialIcon } from "./SocialIcon/SocialIcon";
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as About } from "./About/About";
+export { default as Experience } from "./Experience/Experience";
+export { default as Footer } from "./Footer/Footer";
+export { default as BackToTop } from "./BackToTop/BackToTop";
+export { default as Waypoints } from "./Waypoint/Waypoints";
+export { default as MenuToggle } from "./MenuToggle/MenuToggle";
