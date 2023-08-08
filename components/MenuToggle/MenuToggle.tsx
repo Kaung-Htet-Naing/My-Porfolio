@@ -17,12 +17,12 @@ type MenuToggleProps = {
 
 const MenuToggle = ({ toggleNav }: MenuToggleProps) => (
 	<button
-		className="bg-transparent border-none cursor-pointer"
+		className="flex items-center bg-transparent bg-white border-none cursor-pointer"
 		onClick={() => {
 			toggleNav();
 		}}
 	>
-		<svg width="45" height="45" viewBox="0 0 23 23">
+		<svg width="2rem" height="2rem" viewBox="0 0 23 23">
 			<Path
 				variants={{
 					closed: { d: "M 2 2.5 L 20 2.5" },

@@ -30,7 +30,7 @@ const Modal: React.FC<ModalProps> = (props) => {
 				initial={{ opacity: 1 }}
 				animate={{ opacity: 1 }}
 				exit={{ opacity: 0 }}
-				className="fixed top-0 left-0 z-20 w-full h-screen bg-black bg-opacity-75"
+				className="fixed top-0 left-0 z-50 w-full h-screen bg-black bg-opacity-75"
 				onClick={props.onClose}
 			>
 				<motion.div

@@ -23,7 +23,8 @@
 			"@/*": ["./src/*"],
 			"@components/*": ["./components/*"],
 			"@hooks/*": ["./hooks/*"],
-			"@core/*": ["./core/*"],
+			"@utils/*": ["./utils/*"],
+			"@context/*": ["./context/*"],
 			"@public/*": ["./public/*"]
 		}
 	},

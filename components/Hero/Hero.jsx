@@ -1,13 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { SocialIcon, Waypoints } from '..';
 import Typed from "react-typed";
+import Modal from '@components/Modal/Modal';
+import { open_sans } from "@utils/fonts";
 
-const myProfession = "< I'm a Web Developer />";
+const myProfession = "<I'm a Front-End Developer/>";
 
 const Hero = () => {
 	const [showModal, setShowModal] = useState();
@@ -51,7 +53,7 @@ const Hero = () => {
 							</h3>
 							<h1
 								data-aos="fade-right"
-								className="text-xl md:text-5xl text-primary-text"
+								className={`text-2xl font-medium md:text-[2.7rem] text-primary-text ${open_sans.className}`}
 							>
 								{myProfession}
 							</h1>
@@ -74,7 +76,7 @@ const Hero = () => {
 							<p
 								data-aos="fade-right"
 								data-aos-duration="1000"
-								className="mb-2 font-extrabold text-tertiary-text md:text-xl bg-clip-text bg-gradient-to-br from-[#d99006] to-[#fdea71] md:inline-block "
+								className="mb-2 text-base font-extrabold text-tertiary-text md:text-xl bg-clip-text bg-gradient-to-br from-[#d99006] to-[#fdea71] md:inline-block "
 							>
 								Someone who likes to{" "}
 								<Typed
@@ -136,6 +138,9 @@ const Hero = () => {
 						</a>
 					</div>
 				</div>
+				<AnimatePresence>
+					{showModal && <Modal contact onClose={closeModalHandler} />}
+				</AnimatePresence>
 			</section>
 		</Waypoints>
 	);

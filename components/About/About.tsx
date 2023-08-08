@@ -1,17 +1,24 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useRive } from "@rive-app/react-canvas";
 import { Waypoints } from "..";
-import calculateAge from "@core/calculateAge";
+import calculateAge from "../../utils/calculateAge";
+import { open_sans } from "@utils/fonts";
+import { ResumeContext } from "@context/resumeProvider";
+import ResumeData from "../../types/ResumeData";
 
 const aboutMe = "< About Me/>";
 
 export default function About() {
+	const {
+		basics: { summary },
+	} = useContext(ResumeContext) as ResumeData;
 	const { rive, RiveComponent } = useRive({
 		src: "/images/riv/coder.riv",
 		autoplay: true,
 	});
+
 	const age = calculateAge();
 	let [gh, setGh] = useState<any>("Fetching...");
 	useEffect(() => {
@@ -21,7 +28,6 @@ export default function About() {
 					"https://api.github.com/users/Kaung-Htet-Naing"
 				);
 				const data = await res.json();
-				console.log(data);
 				setGh(data);
 			} catch {
 				setGh({ public_repos: "several" });
@@ -69,36 +75,23 @@ export default function About() {
 									{aboutMe}
 								</h1>
 								<div
-									className="bg-primary-text w-[200px] h-[5px]"
+									className={`bg-primary-text w-[200px] h-[5px] ${open_sans.className}`}
 									data-aos="fade-up"
 									data-aos-duration="1000"
 								></div>
 								<p className="mt-2">
-									{`I live in Purwokerto, Indonesia. My full name is Jastin
-                  Linggar Tama, just call me Jastin. I'm ${age} years old. A Software
-                  Engineering student, I have known Programming since 2020 and
-                  am quite familiar with HTML, CSS, Javascript and several other
-                  languages ​​& frameworks.`}
+									{`I'm currently living in ChiangMai, Thailand. My full name is Kaung Htet Naing.
+                  I'm ${age} years old,
+                  and while I haven't completed my graduation due to the disruptions caused by Covid-19 and military coup,
+                  I pursued my studies in Information Technology at the Technological University Mandalay at 3rd years.`}
 								</p>
-								<p className="mt-5">
-									A Little Story, In the past, I preferred to learn about Back
-									End but when I got to know Front End frameworks like NextJs, I
-									think now I prefer to learn about Front End. But I&apos;m also
-									learning New Things about Back End in PHP now. I don&apos;t
-									know, I&apos;m a person who likes to learn new things but
-									rarely takes it seriously.
-								</p>
-								<p className="mt-5">
-									One more thing, I have created{" "}
-									<span className="font-bold">{gh.public_repos}</span> public
-									repository on my Github. Various repositories such as
-									templates or even just a package to make things easier. There
-									are several serious projects but now they are rarely developed
-									due to conflicts with school work.
-								</p>
-								{/* <div class="tooltip tooltip-open tooltip-right mt-5" data-tip={`${gh.followers} Followers, ${gh.following} Following`}>
-                <button class="btn"><FaGithub className="w-5 h-5 mr-2" /> Github</button>
-              </div> */}
+								{summary && <p className="mt-5">{summary}</p>}
+								{/* <div
+									className="mt-5 tooltip tooltip-open tooltip-right"
+									data-tip={`${gh.followers} Followers, ${gh.following} Following`}
+								>
+									<button className="btn">Github</button>
+								</div> */}
 							</div>
 						</div>
 					</section>

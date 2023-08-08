@@ -1,6 +1,6 @@
+"use client";
 import Projects from "@components/Project/Project";
-import { About, BackToTop, Experience, Footer, Hero } from "@components/index";
-import Image from "next/image";
+import { About, BackToTop, Experience, Hero } from "@components/index";
 
 export default function Home() {
 	return (
