@@ -1,8 +1,9 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { FaCode, FaPlay } from "react-icons/fa";
 import placeholder from "@public/images/png/placeholder.png";
 import styles from "./projectCard.module.css";
+import truncateText from "@utils/truncateText";
 
 interface SingleProjectProps {
 	id: number;
@@ -11,7 +12,7 @@ interface SingleProjectProps {
 	tags: string[];
 	code: string;
 	demo: string;
-	image?: string;
+	image?: StaticImageData;
 }
 
 function SingleProject({
@@ -26,23 +27,23 @@ function SingleProject({
 	return (
 		<div
 			key={id}
-			className={`${styles.singleProject} bg-[#AEAEAE]`}
+			className={`${styles.singleProject} bg-color-grey rounded shadow  duration-300 transition-background`}
 			data-aos="fade-up-top"
 		>
 			<div className={styles.projectContent}>
-				<h2
+				<p
 					id={name.replace(" ", "-").toLowerCase()}
-					style={{ color: "#283953" }}
+					className="text-[#283953]  font-semibold text-xl text-center leading-loose"
 				>
 					{name}
-				</h2>
+				</p>
 				<Image src={image ? image : placeholder} alt={name} />
 				<div className={styles.projectShowcaseBtn}>
 					<a
 						href={demo}
 						target="_blank"
 						rel="noreferrer"
-						className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-tertiary-text text-[#EFF3F4] hover:text-tertiary-text transition hover:scale-[1.1]"
+						className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white hover:border-tertiary-text text-white hover:text-tertiary-text transition hover:scale-[1.1]"
 						aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
 							.replace(" ", "-")
 							.toLowerCase()}-demo`}
@@ -57,7 +58,7 @@ function SingleProject({
 						href={code}
 						target="_blank"
 						rel="noreferrer"
-						className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-tertiary-text text-[#EFF3F4] hover:text-tertiary-text transition hover:scale-[1.1]"
+						className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white hover:border-tertiary-text text-white hover:text-tertiary-text transition hover:scale-[1.1]"
 						aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
 							.replace(" ", "-")
 							.toLowerCase()}-code`}
@@ -70,10 +71,14 @@ function SingleProject({
 					</a>
 				</div>
 			</div>
-			<p className={`${styles.projectDesc} bg-white text-primary-text`}>
-				{desc}
+			<p
+				className={`${styles.projectDesc} bg-white text-primary-text overflow-hidden rounded-md`}
+			>
+				{truncateText(desc)}
 			</p>
-			<div className={`${styles.projectLang}  bg-white text-primary-text`}>
+			<div
+				className={`${styles.projectLang}  bg-white text-primary-text rounded-md`}
+			>
 				{tags.map((tag, id) => (
 					<span key={id}>{tag}</span>
 				))}

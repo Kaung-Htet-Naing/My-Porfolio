@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import { HiArrowRight } from "react-icons/hi";
 import { projectsData } from "@public/data/project-data";
 import styles from "./project.module.css";
 import SingleProject from "./ProjectCard/ProjectCard";
 import { Waypoints } from "..";
 import { FaAngleRight, FaGithub } from "react-icons/fa";
 
-const projects = "< Projects/>";
+const projectsText = "< Projects/>";
 
 function Projects() {
 	return (
@@ -26,8 +25,8 @@ function Projects() {
 				{projectsData.length > 0 && (
 					<div className="flex flex-col items-center justify-start p-8 overflow-x-hidden min-h-fit bg-secondary-background">
 						<div className="flex flex-col items-center justify-center w-full mb-10">
-							<h1 className="text-2xl text-black" data-aos="fade-up">
-								{projects}
+							<h1 className="text-3xl font-bold text-black" data-aos="fade-up">
+								{projectsText}
 							</h1>
 							<div
 								className="bg-primary-text w-[200px] h-[5px]"
@@ -50,7 +49,7 @@ function Projects() {
 									/>
 								))}
 							</div>
-							{projectsData.length > 3 && (
+							{projectsData.length >= 2 && (
 								<>
 									<div className="mt-20 text-sm font-medium text-center text-white cursor-pointer">
 										<a

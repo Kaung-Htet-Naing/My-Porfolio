@@ -1,5 +1,6 @@
 "use client";
 import Projects from "@components/Project/Project";
+import RivLoading from "@components/RIvComponent/RivComponent";
 import { About, BackToTop, Experience, Hero } from "@components/index";
 
 export default function Home() {

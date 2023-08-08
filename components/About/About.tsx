@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect, useContext } from "react";
-import { useRive } from "@rive-app/react-canvas";
+import { useContext } from "react";
 import { Waypoints } from "..";
 import calculateAge from "../../utils/calculateAge";
 import { open_sans } from "@utils/fonts";
 import { ResumeContext } from "@context/resumeProvider";
 import ResumeData from "../../types/ResumeData";
+import RivComponent from "@components/RIvComponent/RivComponent";
 
 const aboutMe = "< About Me/>";
 
@@ -14,26 +14,7 @@ export default function About() {
 	const {
 		basics: { summary },
 	} = useContext(ResumeContext) as ResumeData;
-	const { rive, RiveComponent } = useRive({
-		src: "/images/riv/coder.riv",
-		autoplay: true,
-	});
-
 	const age = calculateAge();
-	let [gh, setGh] = useState<any>("Fetching...");
-	useEffect(() => {
-		(async () => {
-			try {
-				const res = await fetch(
-					"https://api.github.com/users/Kaung-Htet-Naing"
-				);
-				const data = await res.json();
-				setGh(data);
-			} catch {
-				setGh({ public_repos: "several" });
-			}
-		})();
-	}, []);
 
 	return (
 		<div className="bg-primary-background">
@@ -51,17 +32,15 @@ export default function About() {
 				<div className="px-4 bg-secondary-background" id="about">
 					<section className="py-20 text-black ">
 						<div className="grid grid-cols-1 md:grid-cols-2">
-							<div className="flex justify-center py-5 mb-20 md:mb-0 ">
-								<Image
-									className="z-50"
-									src="/images/about.svg"
-									alt="about me"
-									width={200}
-									height={200}
+							<div className="flex items-center justify-center py-5 mb-20 md:mb-0">
+								<div
+									className="w-[400px] h-[400px] z-10 "
 									data-aos="fade-up-right"
-								/>
+								>
+									<RivComponent />
+								</div>
 								<Image
-									src="/images/blob/2.svg"
+									src="/images/blob/1.svg"
 									className="absolute mt-5 md:mt-20"
 									alt="blob"
 									width={350}
@@ -79,13 +58,15 @@ export default function About() {
 									data-aos="fade-up"
 									data-aos-duration="1000"
 								></div>
-								<p className="mt-2">
-									{`I'm currently living in ChiangMai, Thailand. My full name is Kaung Htet Naing.
+								<div data-aos="fade-up">
+									<p className="mt-2">
+										{`I'm currently living in ChiangMai, Thailand. My full name is Kaung Htet Naing.
                   I'm ${age} years old,
                   and while I haven't completed my graduation due to the disruptions caused by Covid-19 and military coup,
                   I pursued my studies in Information Technology at the Technological University Mandalay at 3rd years.`}
-								</p>
-								{summary && <p className="mt-5">{summary}</p>}
+									</p>
+									{summary && <p className="mt-5">{summary}</p>}
+								</div>
 								{/* <div
 									className="mt-5 tooltip tooltip-open tooltip-right"
 									data-tip={`${gh.followers} Followers, ${gh.following} Following`}
