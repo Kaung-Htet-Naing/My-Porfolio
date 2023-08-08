@@ -13,6 +13,7 @@ function Projects() {
 		<div id="projects" className="bg-primary-background">
 			<Waypoints target={"toprojects"}>
 				<svg
+					className="-m-0.5"
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 1440 320"
 					fill="#fff"
@@ -69,6 +70,7 @@ function Projects() {
 				)}
 			</Waypoints>
 			<svg
+				className="-m-0.5"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 1440 320"
 				fill="#fff"

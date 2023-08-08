@@ -17,8 +17,9 @@ export default function About() {
 	const age = calculateAge();
 
 	return (
-		<div className="bg-primary-background">
+		<div className="bg-primary-background ">
 			<svg
+				className="-m-0.5"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 1440 320"
 				fill="#fff"
@@ -79,6 +80,7 @@ export default function About() {
 				</div>
 			</Waypoints>
 			<svg
+				className="-m-0.5"
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 1440 320"
 				fill="#fff"

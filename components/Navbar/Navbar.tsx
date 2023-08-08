@@ -52,7 +52,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 			>
 				<div className="relative h-full px-4">
 					<div className="flex items-center justify-between h-full">
-						<div className="z-3 font-bold rounded-full p-5 w-[45px] h-[45px] shadow-md relative overflow-hidden">
+						<div
+							className="z-3 font-bold rounded-full p-5 w-[45px] h-[45px] shadow-md relative overflow-hidden"
+							data-aos="zoom-in"
+						>
 							<Image
 								src="/favicon/android-chrome-384x384.png"
 								alt="kaung htet naing"
@@ -61,57 +64,33 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 						</div>
 						<nav className="w-[45%] hidden md:flex bg-transparent" id="navMenu">
 							<div className="flex justify-between w-full p-0">
-								<motion.a
-									style={{ cursor: "pointer" }}
-									initial={{ opacity: 0, y: -30 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.5 }}
-									href="#hero"
-									id="tohero"
-									className="text-secondary-text"
-								>
+								<a href="#hero" id="tohero" className="text-secondary-text">
 									Home
-								</motion.a>
-								<motion.a
-									href="#about"
-									id="toabout"
-									className="text-secondary-text"
-									style={{ cursor: "pointer" }}
-									initial={{ opacity: 0, y: -30 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.6 }}
-								>
+								</a>
+								<a href="#about" id="toabout" className="text-secondary-text">
 									About
-								</motion.a>
-								<motion.a
+								</a>
+								<a
 									href="#experience"
 									id="toexperience"
 									className="text-secondary-text"
 									style={{ cursor: "pointer" }}
-									initial={{ opacity: 0, y: -30 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.7 }}
 								>
 									Experience
-								</motion.a>
-								<motion.a
+								</a>
+								<a
 									href="#projects"
 									id="toprojects"
 									className="text-secondary-text"
 									style={{ cursor: "pointer" }}
-									initial={{ opacity: 0, y: -30 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.7 }}
 								>
 									Projects
-								</motion.a>
+								</a>
 							</div>
 						</nav>
-						<div className="flex items-center gap-x-6">
-							<motion.button
-								initial={{ opacity: 0, y: -30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5 }}
+						<div className="flex items-center gap-x-6 ">
+							<button
+								data-aos="zoom-in"
 								className="border-none cursor-pointer"
 								onClick={() => {
 									toggleModal();
@@ -125,9 +104,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 								>
 									{showModal ? <FaEnvelopeOpen /> : <FaEnvelope />}
 								</IconContext.Provider>
-							</motion.button>
+							</button>
 							<motion.div
-								className="block h-8 md:hidden"
+								data-aos="zoom-in"
+								className="block h-[2rem] md:hidden"
 								initial={false}
 								animate={isOpen ? "open" : "closed"}
 							>
@@ -143,54 +123,42 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 						id="navMenu"
 					>
 						<div className="flex flex-col justify-between w-full p-0 bg-primary-background/70">
-							<motion.a
+							<a
 								href="/"
 								id="tohero "
 								className="p-4 border-white border-y"
 								style={{ cursor: "pointer" }}
-								initial={{ opacity: 0, y: -30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5 }}
 								onClick={toggleNav}
 							>
 								Home
-							</motion.a>
-							<motion.a
+							</a>
+							<a
 								href="#about"
 								id="toabout"
 								className="p-4 border-b border-white "
 								style={{ cursor: "pointer" }}
-								initial={{ opacity: 0, y: -30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5 }}
 								onClick={toggleNav}
 							>
 								About
-							</motion.a>
-							<motion.a
+							</a>
+							<a
 								href="#experience"
 								id="toexperience"
 								className="p-4 border-b border-white"
 								style={{ cursor: "pointer" }}
-								initial={{ opacity: 0, y: -30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.6 }}
 								onClick={toggleNav}
 							>
 								Experiece
-							</motion.a>
-							<motion.a
+							</a>
+							<a
 								href="#projects"
 								id="toprojects"
 								className="p-4 border-b border-white"
 								style={{ cursor: "pointer" }}
-								initial={{ opacity: 0, y: -30 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5 }}
 								onClick={toggleNav}
 							>
 								Projects
-							</motion.a>
+							</a>
 						</div>
 					</nav>
 				</div>
