@@ -1,6 +1,5 @@
 import mmfontshub from "@public/images/projects/mmfontshub.jpg";
 import hunterdox from "@public/images/projects/hunterdox.jpg";
-
 export const projectsData = [
 	{
 		id: 1,
