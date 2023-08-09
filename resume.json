@@ -1,4 +1,5 @@
 {
+	"meta": { "theme": "macchiato" },
 	"basics": {
 		"name": "John Doe",
 		"label": "Programmer",
