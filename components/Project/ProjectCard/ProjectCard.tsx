@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import { FaCode, FaPlay } from "react-icons/fa";
+import { FaCode, FaPlay, FaAndroid, FaAppStoreIos } from "react-icons/fa";
 import placeholder from "@public/images/png/placeholder.png";
 import styles from "./projectCard.module.css";
 import truncateText from "@utils/truncateText";
@@ -11,7 +11,9 @@ interface SingleProjectProps {
 	desc: string;
 	tags: string[];
 	code: string;
-	demo: string;
+	demo?: string;
+	androidDemo?: string;
+	iosDemo?: string;
 	image?: StaticImageData;
 }
 
@@ -23,6 +25,8 @@ function SingleProject({
 	code,
 	demo,
 	image,
+	androidDemo,
+	iosDemo,
 }: SingleProjectProps) {
 	return (
 		<div
@@ -40,7 +44,7 @@ function SingleProject({
 				<Image src={image ? image : placeholder} alt={name} />
 				<div className={styles.projectShowcaseBtn}>
 					<a
-						href={demo}
+						href={androidDemo ? androidDemo : demo}
 						target="_blank"
 						rel="noreferrer"
 						className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white hover:border-tertiary-text text-white hover:text-tertiary-text transition hover:scale-[1.1]"
@@ -48,14 +52,22 @@ function SingleProject({
 							.replace(" ", "-")
 							.toLowerCase()}-demo`}
 					>
-						<FaPlay
-							id={`${name.replace(" ", "-").toLowerCase()}-demo`}
-							className="text-[1.1rem] transition"
-							aria-label="Demo"
-						/>
+						{androidDemo ? (
+							<FaAndroid
+								id={`${name.replace(" ", "-").toLowerCase()}-demo`}
+								className="text-[1.1rem] transition"
+								aria-label="Demo"
+							/>
+						) : (
+							<FaPlay
+								id={`${name.replace(" ", "-").toLowerCase()}-demo`}
+								className="text-[1.1rem] transition"
+								aria-label="Demo"
+							/>
+						)}
 					</a>
 					<a
-						href={code}
+						href={iosDemo ? iosDemo : code}
 						target="_blank"
 						rel="noreferrer"
 						className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white hover:border-tertiary-text text-white hover:text-tertiary-text transition hover:scale-[1.1]"
@@ -63,11 +75,19 @@ function SingleProject({
 							.replace(" ", "-")
 							.toLowerCase()}-code`}
 					>
-						<FaCode
-							id={`${name.replace(" ", "-").toLowerCase()}-code`}
-							className="text-[1.1rem] transition"
-							aria-label="Code"
-						/>
+						{iosDemo ? (
+							<FaAppStoreIos
+								id={`${name.replace(" ", "-").toLowerCase()}-code`}
+								className="text-[1.1rem] transition"
+								aria-label="Code"
+							/>
+						) : (
+							<FaCode
+								id={`${name.replace(" ", "-").toLowerCase()}-code`}
+								className="text-[1.1rem] transition"
+								aria-label="Code"
+							/>
+						)}
 					</a>
 				</div>
 			</div>

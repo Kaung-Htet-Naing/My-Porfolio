@@ -46,11 +46,13 @@ function Projects() {
 										tags={project.tags}
 										code={project.code}
 										demo={project.demo}
+										androidDemo={project.androidDemo}
+										iosDemo={project.iosDemo}
 										image={project.image}
 									/>
 								))}
 							</div>
-							{projectsData.length >= 2 && (
+							{projectsData.length >= 3 && (
 								<>
 									<div className="mt-20 text-sm font-medium text-center text-white cursor-pointer">
 										<a
@@ -60,7 +62,7 @@ function Projects() {
 											rel="noopener noreferrer"
 										>
 											<FaGithub className="w-5 h-5 mr-2 " />
-											VIEW ALL MY PROJECTS. <FaAngleRight className="ml-2" />
+											VIEW MY PROJECTS. <FaAngleRight className="ml-2" />
 										</a>
 									</div>
 								</>
