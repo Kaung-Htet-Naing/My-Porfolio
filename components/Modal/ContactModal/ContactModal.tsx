@@ -8,7 +8,8 @@ interface ContactModal {
 }
 
 const ContactModal: React.FC<ContactModal> = (props) => {
-	const [state, handleSubmit] = useForm("123xyz"); //TODO: replaceWithYourOwn
+	const [state, handleSubmit] = useForm("xgejaoky");
+	//TODO: replaceWithYourOwn
 	if (state.submitting) {
 		return (
 			<div>
@@ -143,7 +144,6 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 								required
 								className="w-full px-2 bg-transparent border-b-2 focus:outline-none focus:bg-transparent"
 							/>
-
 							<ValidationError
 								prefix="Email"
 								field="email"

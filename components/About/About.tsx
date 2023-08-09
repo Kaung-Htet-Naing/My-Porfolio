@@ -8,7 +8,7 @@ import { ResumeContext } from "@context/resumeProvider";
 import ResumeData from "../../types/ResumeData";
 import RivComponent from "@components/RIvComponent/RivComponent";
 
-const aboutMe = "< About Me/>";
+const aboutMe = "< About Me />";
 
 export default function About() {
 	const {
@@ -35,7 +35,7 @@ export default function About() {
 						<div className="grid grid-cols-1 md:grid-cols-2">
 							<div className="flex items-center justify-center py-5 mb-20 md:mb-0">
 								<div
-									className="w-[400px] h-[400px] z-10 "
+									className="w-[400px] h-[400px] z-10"
 									data-aos="fade-up-right"
 								>
 									<RivComponent />
@@ -51,14 +51,21 @@ export default function About() {
 								/>
 							</div>
 							<div className="pt-10 md:mr-10">
-								<h1 className="text-3xl font-bold leading-9" data-aos="fade-up">
-									{aboutMe}
-								</h1>
-								<div
-									className={`bg-primary-text w-[200px] h-[5px] ${open_sans.className}`}
-									data-aos="fade-up"
-									data-aos-duration="1000"
-								></div>
+								<div className="inline-block ">
+									<div className="flex flex-col items-center">
+										<h1
+											className="text-3xl font-bold leading-9"
+											data-aos="fade-up"
+										>
+											{aboutMe}
+										</h1>
+										<div
+											className={`bg-primary-text w-[150px] h-[5px] ${open_sans.className}`}
+											data-aos="fade-up"
+											data-aos-duration="1000"
+										/>
+									</div>
+								</div>
 								<div data-aos="fade-up">
 									<p className="mt-2">
 										{`I'm currently living in ChiangMai, Thailand. My full name is Kaung Htet Naing.

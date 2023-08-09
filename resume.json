@@ -3,8 +3,9 @@
 	"basics": {
 		"name": "Kaung Htet Naing",
 		"label": "Front-End Developer",
-		"email": "11kaungkaung99@gmail.com",
+		"email": "dev.kaunghtetnaing@gmail.com",
 		"phone": "0805573473",
+		"url": "https://johndoe.com",
 		"summary": "I specialize in building responsive and scalable web applications using modern frontend technologies such as HTML5, CSS3, and JavaScript.With a strong foundation in frontend frameworks like React and React Naitve, I have successfully delivered impactful projects that meet both client requirements and industry best practices.I have a keen eye for design and a deep understanding of UX principles, allowing me to collaborate effectively with designers to translate wireframes and mockups into pixel-perfect UIs.If you are looking for a dedicated and skilled frontend developer who is passionate about creating exceptional user interfaces, I would love to connect. Let's discuss how we can work together to bring your web projects to life.",
 		"location": {
 			"postalCode": "50100",

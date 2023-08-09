@@ -6,7 +6,7 @@ import SingleProject from "./ProjectCard/ProjectCard";
 import { Waypoints } from "..";
 import { FaAngleRight, FaGithub } from "react-icons/fa";
 
-const projectsText = "< Projects/>";
+const projectsText = "< Projects />";
 
 function Projects() {
 	return (
@@ -30,7 +30,7 @@ function Projects() {
 								{projectsText}
 							</h1>
 							<div
-								className="bg-primary-text w-[200px] h-[5px]"
+								className="bg-primary-text w-[130px] h-[5px]"
 								data-aos="fade-up"
 								data-aos-duration="1000"
 							></div>

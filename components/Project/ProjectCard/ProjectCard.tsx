@@ -77,7 +77,7 @@ function SingleProject({
 				{truncateText(desc)}
 			</p>
 			<div
-				className={`${styles.projectLang}  bg-white text-primary-text rounded-md`}
+				className={`${styles.projectLang}  bg-white text-primary-text rounded `}
 			>
 				{tags.map((tag, id) => (
 					<span key={id}>{tag}</span>
