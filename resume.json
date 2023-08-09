@@ -1,5 +1,5 @@
 {
-	"meta": { "theme": "macchiato" },
+	"meta": { "theme": "caffine" },
 	"basics": {
 		"name": "Kaung Htet Naing",
 		"label": "Front-End Developer",
@@ -13,12 +13,8 @@
 			"countryCode": "TH",
 			"region": "Thailand"
 		},
+
 		"profiles": [
-			{
-				"url": "https://kaunghtetnaing.me",
-				"username": "Kaung Htet Naing",
-				"network": "Website"
-			},
 			{
 				"url": "https://github.com/Kaung-Htet-Naing",
 				"username": "Kaung Htet Naing",
