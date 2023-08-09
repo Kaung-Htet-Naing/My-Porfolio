@@ -1,110 +1,119 @@
 {
-	"meta": { "theme": "macchiato" },
 	"basics": {
-		"name": "Kaung Htet Naing",
-		"label": "Front-End Developer",
-		"email": "dev.kaunghtetnaing@gmail.com",
-		"phone": "0805573473",
-		"url": "https://kaunghtetnaing.com",
-		"summary": "I specialize in building responsive and scalable web applications using modern frontend technologies such as HTML5, CSS3, and JavaScript.With a strong foundation in frontend frameworks like React and React Naitve, I have successfully delivered impactful projects that meet both client requirements and industry best practices.I have a keen eye for design and a deep understanding of UX principles, allowing me to collaborate effectively with designers to translate wireframes and mockups into pixel-perfect UIs.If you are looking for a dedicated and skilled frontend developer who is passionate about creating exceptional user interfaces, I would love to connect. Let's discuss how we can work together to bring your web projects to life.",
+		"name": "John Doe",
+		"label": "Programmer",
+		"image": "",
+		"email": "john@gmail.com",
+		"phone": "(912) 555-4321",
+		"url": "https://johndoe.com",
+		"summary": "A summary of John Doe…",
 		"location": {
-			"postalCode": "50100",
-			"city": "Chiang Mai",
-			"countryCode": "TH",
-			"region": "Thailand"
+			"address": "2712 Broadway St",
+			"postalCode": "CA 94115",
+			"city": "San Francisco",
+			"countryCode": "US",
+			"region": "California"
 		},
 		"profiles": [
 			{
-				"url": "https://github.com/Kaung-Htet-Naing",
-				"username": "Kaung Htet Naing",
-				"network": "Github"
-			},
-			{
-				"url": "https://www.linkedin.com/in/kaung-htet-naing-7b252",
-				"username": "Kaung Htet Naing",
-				"network": "Linkedin"
+				"network": "Twitter",
+				"username": "john",
+				"url": "https://twitter.com/john"
 			}
 		]
 	},
 	"work": [
 		{
-			"name": "Digit House",
-			"position": "Front-End Developer",
-			"startDate": "2022-01-01",
-			"highlights": [
-				"Developed and designed a Myanmar fonts downloader website using Next.js.",
-				"Implemented intuitive and user-friendly interfaces for the website, allowing users to easily navigate and search for their desired fonts.",
-				"Integrated font preview and download functionality, enabling users to visualize and download fonts of their choice.",
-				"Worked on an e-commerce dashboard project, responsible for developing and designing real-time analytics, sales reports, and inventory management features.",
-				"Collaborated with the backend team to integrate the dashboard with necessary APIs and data sources, ensuring seamless data flow and accurate information display.",
-				"Designed interactive data visualizations, including charts and graphs, to present complex data in a clear and understandable format.",
-				"Developed product listing pages with filtering and sorting functionalities to enhance product discoverability.",
-				"Built a course download application that connects with GraphQL and the Strapi dashboard, allowing users to easily browse and download educational courses.",
-				"Ensured a smooth user experience through intuitive design, error handling, and validation.",
-				"Designed and updated layouts to meet usability and performance requirements."
-			]
-		},
+			"name": "Company",
+			"position": "President",
+			"url": "https://company.com",
+			"startDate": "2013-01-01",
+			"endDate": "2014-01-01",
+			"summary": "Description…",
+			"highlights": ["Started the company"]
+		}
+	],
+	"volunteer": [
 		{
-			"name": "Freelance",
-			"position": "React Native Developer",
-			"startDate": "2021-01-06",
-			"endDate": "2021-10-06",
-			"highlights": [
-				"Collaborated on stages of systems development lifecycle from requirement gathering to production releases.",
-				"Revised, modularized and updated old code bases to modern development standards, reducing operating costs, and improving functionality.",
-				"Developed Android and iOS applications for a leading Japanese coffee shop industry.",
-				"Utilized React Native to build and maintain a mobile application for the coffee shop.",
-				"Integrated Google Maps API to provide location-based services and enable users to find nearby coffee shops.",
-				"Collaborated closely with the backend team to ensure smooth API integration and data flow.",
-				"Implemented features such as user authentication, menu display, ordering system, and push notifications."
-			]
+			"organization": "Organization",
+			"position": "Volunteer",
+			"url": "https://organization.com/",
+			"startDate": "2012-01-01",
+			"endDate": "2013-01-01",
+			"summary": "Description…",
+			"highlights": ["Awarded 'Volunteer of the Month'"]
 		}
 	],
 	"education": [
 		{
-			"institution": "Technological University Mandalay",
-			"url": "https://tum-mandalay.edu.mm",
-			"area": "Information Technology(incomplete)",
+			"institution": "University",
+			"url": "https://institution.com/",
+			"area": "Software Development",
 			"studyType": "Bachelor",
-			"startDate": "2016-07-01",
-			"endDate": "2020-03-23"
+			"startDate": "2011-01-01",
+			"endDate": "2013-01-01",
+			"score": "4.0",
+			"courses": ["DB1101 - Basic SQL"]
+		}
+	],
+	"awards": [
+		{
+			"title": "Award",
+			"date": "2014-11-01",
+			"awarder": "Company",
+			"summary": "There is no spoon."
+		}
+	],
+	"certificates": [
+		{
+			"name": "Certificate",
+			"date": "2021-11-07",
+			"issuer": "Company",
+			"url": "https://certificate.com"
+		}
+	],
+	"publications": [
+		{
+			"name": "Publication",
+			"publisher": "Company",
+			"releaseDate": "2014-10-01",
+			"url": "https://publication.com",
+			"summary": "Description…"
 		}
 	],
 	"skills": [
 		{
-			"name": "Front-End Development",
-			"keywords": [
-				"HTML",
-				"CSS",
-				"JavaScript",
-				"TypeScript",
-				"React",
-				"React Native",
-				"Next Js",
-				"Git"
-			]
+			"name": "Web Development",
+			"level": "Master",
+			"keywords": ["HTML", "CSS", "JavaScript"]
 		}
 	],
 	"languages": [
 		{
 			"language": "English",
-			"fluency": "Intermediate"
-		},
-		{
-			"language": "Myanmar",
 			"fluency": "Native speaker"
+		}
+	],
+	"interests": [
+		{
+			"name": "Wildlife",
+			"keywords": ["Ferrets", "Unicorns"]
+		}
+	],
+	"references": [
+		{
+			"name": "Jane Doe",
+			"reference": "Reference…"
 		}
 	],
 	"projects": [
 		{
-			"name": "MM Fonts Hub",
-			"summary": "MmFontsHub.com is Myanmar's premier online platform for fonts, catering specifically to the needs of the Myanmar community. Our website offers a vast collection of high-quality fonts, carefully curated and optimized for various projects, including web design, graphic design, branding, and more. Discover an extensive range of traditional and contemporary fonts, all conveniently accessible in one place. Whether you're a professional designer or an enthusiast, MmFontsHub.com provides the perfect resource to enhance your creative projects and express your unique style in the Myanmar language",
-			"url": "https://www.mmfontshub.com"
-		},
-		{
-			"name": "Hunterdox",
-			"summary": "Hunterdox is a online course platform, a comprehensive platform for online learning and education. With a user-friendly interface and intuitive navigation. HunterDox offers a wide range of courses across various disciplines. Students can easily browse and enroll in both premium and free courses, gaining access to high-quality educational content. The platform provides interactive lessons, assessments, and progress tracking to enhance the learning experience",
-			"url": "https://hunterdox.com"
+			"name": "Project",
+			"startDate": "2019-01-01",
+			"endDate": "2021-01-01",
+			"summary": "Summary...",
+			"highlights": ["Won award at AIHacks 2016"],
+			"url": "https://project.com/"
 		}
 	]
 }
