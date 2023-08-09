@@ -13,24 +13,26 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 	if (state.submitting) {
 		return (
 			<div>
-				<div className="fixed flex flex-col justify-between max-h-screen p-4 overflow-auto text-center transform -translate-x-1/2 -translate-y-1/2 rounded-5 bg-background-card z-3 max-w-[1200px] min-w-340 min-h-[px] left-1/2 top-1/2">
-					<div>
-						<h2>Sending Message</h2>
-						<p>
-							Just a sec...
-							<br />
-							Also feel free to contact me via Linkedin:
-						</p>
-						<div>
-							<a
-								href="https://www.linkedin.com/in/kaung-htet-naing-7b252426b"
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FaLinkedin className="text-[4rem] fill-brand-linkedin rounded drop-shadow" />
-							</a>
-						</div>
-					</div>
+				<div className="text-center rounded-md bg-secondary-background p-4 overflow-hidden z-20 fixed max-w-[1200px] min-w-[340px] max-h-screen min-h-[580px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-around">
+					<h2 className="text-3xl font-semibold">Sending Message</h2>
+					<p>
+						Just a sec...
+						<br />
+						Also feel free to contact me via Linkedin:
+					</p>
+					<motion.div
+						className="flex justify-center"
+						whileHover={{ scale: 1.1 }}
+						whileTap={{ scale: 0.9 }}
+					>
+						<a
+							href="https://www.linkedin.com/in/kaung-htet-naing-7b252426b"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaLinkedin className="text-[4rem] fill-brand-linkedin rounded drop-shadow" />
+						</a>
+					</motion.div>
 				</div>
 			</div>
 		);
@@ -39,7 +41,7 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 	if (state.succeeded) {
 		return (
 			<div>
-				<div className="fixed flex flex-col justify-between max-h-screen p-4 overflow-auto text-center transform -translate-x-1/2 -translate-y-1/2 rounded-5 bg-background-card z-3 max-w-[1200px] min-w-340 min-h-[px] left-1/2 top-1/2">
+				<div className="text-center rounded-md bg-secondary-background p-4 overflow-hidden z-20 fixed max-w-[1200px] min-w-[340px] max-h-screen min-h-[580px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-around">
 					<a
 						href="#!"
 						className="absolute top-[20px] right-[20px]"
@@ -48,28 +50,36 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 						<GrClose className="text-[1.1rem]" />
 					</a>
 					<div>
-						<h2>Thanks for your contact!</h2>
+						<h2 className="text-3xl font-semibold">Thanks for your contact!</h2>
+						<br />
+						<br />
 						<p>
 							Your message was sent!
 							<br />
 							Also feel free to contact me via Linkedin:
 						</p>
-						<div>
-							<a href="#" target="_blank" rel="noreferrer">
-								<GrClose className="text-[1.1rem]" />
-							</a>
-						</div>
 					</div>
-
-					<div className="w-full">
-						<motion.button
-							whileHover={{ scale: 1.1 }}
-							whileTap={{ scale: 0.9 }}
-							className="btn btn-filled"
-							onClick={props.onClose}
-						>
-							OK
-						</motion.button>
+					<div className="flex items-center justify-between mb-0 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+							<a
+								href="https://www.linkedin.com/in/kaung-htet-naing-7b252426b"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FaLinkedin className="text-[4rem] fill-brand-linkedin rounded drop-shadow" />
+							</a>
+						</motion.div>
+						<div className="self-center">
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}
+								type="submit"
+								disabled={state.submitting}
+								className="w-full px-6 py-4 rounded shadow bg-primary-text md:w-auto"
+							>
+								Send Message
+							</motion.button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -79,7 +89,7 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 	if (state.errors.length > 0) {
 		return (
 			<div>
-				<div className="fixed flex flex-col justify-between max-h-screen p-4 overflow-auto text-center transform -translate-x-1/2 -translate-y-1/2 rounded-5 bg-background-card z-3 max-w-[1200px] min-w-340 min-h-[px] left-1/2 top-1/2">
+				<div className="text-center rounded-md bg-secondary-background p-4 overflow-hidden z-20 fixed max-w-[1200px] min-w-[340px] max-h-screen min-h-[580px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-around">
 					<a
 						href="#!"
 						className="absolute top-[20px] right-[20px]"
@@ -88,28 +98,34 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 						<GrClose className="text-[1.1rem]" />
 					</a>
 					<div>
-						<h2>Error!</h2>
+						<h2 className="text-3xl font-semibold">Error!</h2>
 						<p>
-							{state.errors[0].message}
+							<span className="text-red-500">{state.errors[0].message}</span>
 							<br />
 							<br />
 							Also feel free to contact me via Linkedin:
 						</p>
-						{/* <div>
-							<a href="#" target="_blank" rel="noreferrer">
-								<i className="fab fa-linkedin h-[4rem]"></i>
-							</a>
-						</div> */}
 					</div>
-					<div className="w-full">
-						<motion.button
-							whileHover={{ scale: 1.1 }}
-							whileTap={{ scale: 0.9 }}
-							className="btn btn-filled"
-							onClick={props.onClose}
-						>
-							OK
-						</motion.button>
+					<div className="flex items-center justify-between w-full mb-0 ">
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+							<a
+								href="https://www.linkedin.com/in/kaung-htet-naing-7b252426b"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<FaLinkedin className="text-[4rem] fill-brand-linkedin rounded drop-shadow" />
+							</a>
+						</motion.div>
+						<div className="self-center">
+							<motion.button
+								whileHover={{ scale: 1.1 }}
+								whileTap={{ scale: 0.9 }}
+								className="w-full px-6 py-4 rounded shadow bg-primary-text md:w-auto"
+								onClick={props.onClose}
+							>
+								OK
+							</motion.button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -165,7 +181,7 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 						/>
 					</div>
 					<div className="flex items-center justify-between mb-0 ">
-						<div>
+						<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
 							<a
 								href="https://www.linkedin.com/in/kaung-htet-naing-7b252426b"
 								target="_blank"
@@ -173,7 +189,7 @@ const ContactModal: React.FC<ContactModal> = (props) => {
 							>
 								<FaLinkedin className="text-[4rem] fill-brand-linkedin rounded drop-shadow" />
 							</a>
-						</div>
+						</motion.div>
 						<div className="self-center">
 							<motion.button
 								whileHover={{ scale: 1.1 }}
