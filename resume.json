@@ -28,9 +28,18 @@
 	},
 	"work": [
 		{
+			"name": "Codigo",
+			"position": "Front-End Developer",
+			"startDate": "2023-08-14",
+			"url": "https://www.codigo.co",
+			"highlights": []
+		},
+		{
 			"name": "Digit House",
 			"position": "Front-End Developer",
 			"startDate": "2022-01-01",
+			"endDate": "2023-08-11",
+			"url": "https://digithouse.co",
 			"highlights": [
 				"Developed and designed a Myanmar fonts downloader website using Next.js.",
 				"Implemented intuitive and user-friendly interfaces for the website, allowing users to easily navigate and search for their desired fonts.",

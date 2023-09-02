@@ -117,14 +117,15 @@ const Hero = () => {
 							</div>
 						</div>
 						<div
-							className="my-8 mx-auto mt-0 min-[480px[]:my-0 min-[480px]:mx-auto min-[480px]:mt-12 md:m-auto self-center order-1  overflow-hidden text-center rounded-full w-[205px] h-[205px] md:w-[460px] md:h-[460px] min-[480px]:w-[350px] min-[480px]:h-[350px] md:order-2  drop-shadow-md"
+							className="my-8 mx-auto mt-0 min-[480px]:my-0 min-[480px]:mx-auto min-[480px]:mt-12 md:m-auto self-center order-1  overflow-hidden text-center bg-transparent w-[205px] h-[205px] md:w-[460px] md:h-[460px] min-[480px]:w-[350px] min-[480px]:h-[350px] md:order-2  drop-shadow-md"
 							data-aos="fade-left"
 						>
 							<Image
-								src="/images/Default_Cartoon_style_logo_An_intelligent_streetwear_hoodie_we_0_8d8bf534-3397-4aa7-ac7c-06cb7878442f_1.jpg"
+								src="/images/me_kaung_htet_naing.png"
 								width={460}
 								height={460}
 								alt="kaung htet naing"
+								className="drop-shadow"
 							/>
 						</div>
 					</div>

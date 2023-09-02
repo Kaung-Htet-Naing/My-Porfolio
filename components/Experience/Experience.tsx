@@ -16,6 +16,8 @@ export default function Experience() {
 				return <Description work={work[0]} />;
 			case work[1].name:
 				return <Description work={work[1]} />;
+			case work[2].name:
+				return <Description work={work[2]} />;
 		}
 	};
 	const [DescriptionJob, setDescriptionJob] = React.useState(work[0].name);
