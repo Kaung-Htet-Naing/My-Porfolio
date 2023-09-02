@@ -9,7 +9,6 @@ const experience = "< Experience />";
 
 export default function Experience() {
 	const { work } = useContext(ResumeContext) as ResumeData;
-
 	const GetDescription = () => {
 		switch (DescriptionJob) {
 			case work[0].name:
