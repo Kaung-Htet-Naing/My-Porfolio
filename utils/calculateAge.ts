@@ -4,7 +4,6 @@ export default function calculateAge() {
 	const birthYear = new Date(birthDate).getFullYear();
 	const currentYear = new Date().getFullYear();
 	const age = currentYear - birthYear;
-
 	// Check if the birthdate has occurred this year
 	const birthMonth = new Date(birthDate).getMonth();
 	const currentMonth = new Date().getMonth();
